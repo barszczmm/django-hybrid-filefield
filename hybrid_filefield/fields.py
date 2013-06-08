@@ -116,7 +116,7 @@ class FileSelectOrUpload(models.FileField):
 
     def save_form_data(self, instance, data):
         set_dynamic_attrs(self, instance)
-        if data is not None:
+        if data is not None and not isinstance(data, bool) and not isinstance(data, unicode):
             file = self.storage.save(data._get_name(), data)
             file = self.storage.move(
                 file,
