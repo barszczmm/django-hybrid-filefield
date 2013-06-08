@@ -6,7 +6,7 @@ A combination of Django's FileField and FilePathField.
 
 Using pip:
 
-pip install -e git+http://github.com/danieljb/django-hybrid-filefield.git#egg=hybrid_filefield
+pip install -e git+http://github.com/barszczmm/django-hybrid-filefield.git#egg=hybrid_filefield
 
 # Example Usage #
 
@@ -38,7 +38,7 @@ Usage of Hybrid-FileField in an image Model:
 
 #### FileSelectOrUpload.upload_to ####
 
-Path where files will be stored when uploaded via FileField or selected in the FilePathField.
+Path where files will be stored when uploaded via FileField or selected in the FilePathField. This must be string, callable can not be used (unlike in FileField).
 
 #### FileSelectOrUpload.path ####
 
